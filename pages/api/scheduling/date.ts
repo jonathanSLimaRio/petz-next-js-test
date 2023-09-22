@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type DateResponse = Array<string>
 
@@ -10,7 +10,7 @@ function getDates(d1: number, d2: number): Array<Date> {
     return d;
 }
 
-export default function handler(
+export default function handlerDates(
     req: NextApiRequest,
     res: NextApiResponse<DateResponse>
 ) {
