@@ -3,7 +3,7 @@ import { Container, Text } from "@mantine/core";
 export default function Schedule() {
   return (
     <Container size="24rem">
-      <Text fw={500} mt="sm">O Centro Pokémon</Text>
+      <Text fw={500} mt="md">O Centro Pokémon</Text>
       <Text size="sm" mt="sm" mb="sm">
         Como funciona a cura de um pokémon?
       </Text>

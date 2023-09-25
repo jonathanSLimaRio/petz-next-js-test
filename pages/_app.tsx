@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import "../styles/globals.css";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
 const theme = createTheme({
@@ -20,13 +21,16 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <MantineProvider theme={theme}>
-        <AppShell header={{ height: 60 }} padding="md">
+        <AppShell header={{ height: 60 }} footer={{ height: 32 }}>
           <AppShell.Header>
             <Header />
           </AppShell.Header>
           <AppShell.Main>
             <Component {...pageProps} />
           </AppShell.Main>
+          <AppShell.Footer>
+            <Footer />
+          </AppShell.Footer>
         </AppShell>
       </MantineProvider>
     </>
