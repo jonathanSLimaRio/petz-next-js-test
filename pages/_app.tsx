@@ -1,9 +1,10 @@
-import { MantineProvider, createTheme } from '@mantine/core';
-import '@mantine/core/styles.css';
+import { AppShell, MantineProvider, createTheme } from "@mantine/core";
+import "@mantine/core/styles.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import "../styles/globals.css";
+import Header from "./components/Header/Header";
 
 const theme = createTheme({
   /** Put your mantine theme override here */
@@ -19,7 +20,14 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <MantineProvider theme={theme}>
-      <Component {...pageProps} />
+        <AppShell header={{ height: 60 }} padding="md">
+          <AppShell.Header>
+            <Header />
+          </AppShell.Header>
+          <AppShell.Main>
+            <Component {...pageProps} />
+          </AppShell.Main>
+        </AppShell>
       </MantineProvider>
     </>
   );

@@ -74,8 +74,8 @@ export default function Schedule() {
   }, [regionForm]);
 
   return (
-    <Container fluid>
-      <Title order={3}>
+    <Container size="xs">
+      <Title order={5} m="md">
         Preencha o formulário abaixo para agendar sua consulta
       </Title>
       <Container>
